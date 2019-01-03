@@ -53,8 +53,63 @@
 
 #### 逻辑门
 
+与门
+
 ![and-gate](https://github.com/deanisty/Electron/blob/master/LogicGates/and-gate.jpg)
+
+输入和输出的对应关系：
+
+```C
+AND   0   1
+ 0    0   0
+ 1    0   1
+```
+ 
+ 或门
+ 
 ![or-gate](https://github.com/deanisty/Electron/blob/master/LogicGates/or-gate.jpg)
+
+
+输入和输出的对应关系：
+
+```C
+AND   0   1
+ 0    0   1
+ 1    1   1
+```
+ 
+非门
+
 ![not-gate](https://github.com/deanisty/Electron/blob/master/LogicGates/not-gate.jpg)
+
+输入和输出的对应关系：
+
+```C
+AND   0   1
+      1   0
+```
+
+ 与非门
+ 
 ![nand-gate](https://github.com/deanisty/Electron/blob/master/LogicGates/nand-gate.jpg)
+
+输入和输出的对应关系：
+
+```C
+AND   0   1
+ 0    1   1
+ 1    1   0
+```
+
+ 或非门
+ 
 ![nor-gate](https://github.com/deanisty/Electron/blob/master/LogicGates/nor-gate.jpg)
+
+输入和输出的对应关系：
+
+```C
+AND   0   1
+ 0    1   0
+ 1    0   0
+```
+ 
