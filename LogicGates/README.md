@@ -25,14 +25,30 @@
 
 #### 逻辑电路
 
+一个开关、一根电线、一个灯泡和一个电池可以组合成电路，如果增加一个开关，那么这就类似一个逻辑与的关系，只有两个开关同时闭合，才会有电流在电路中流动。
+
 ![circle-and](https://github.com/deanisty/Electron/blob/master/LogicGates/circle-and.jpg)
+
+同样，也可以构造一个类似逻辑或的电路。
+
 ![circle-or](https://github.com/deanisty/Electron/blob/master/LogicGates/circle-or.jpg)
 
 #### 继电器
 
+当有电流在线圈中流动的时候，铁棒会产生磁性并吸引上方的开关使之闭合，形成电磁铁。这就被称作继电器。继电器对电报系统的工作十分重要。
+连接电报站的电线长距离时电阻很大，需要一种方法来接收微弱的信号并把它增强后发送出去。继电器通过使用电磁铁控制开关可做到这一点。
+事实上，继电器放大了一个很弱的信号使其成为一个强信号。就我们的目的而言，我们并不对它的信号放大能力感兴趣，
+真正使我们着迷的是继电器作为开关可用电来控制而不用手指。
+
 ![relay](https://github.com/deanisty/Electron/blob/master/LogicGates/relay.jpg)
 
+正是因为有了继电器的间接触发电路开闭的功能，我们才得以能够构造更加复杂逻辑电路。
+下面是两个继电器构造的逻辑与电路：
+
 ![relay-and](https://github.com/deanisty/Electron/blob/master/LogicGates/relay-and.jpg)
+
+逻辑与电路可以简化成为这个符号：
+
 ![logic-and](https://github.com/deanisty/Electron/blob/master/LogicGates/logic-and.jpg)
 
 #### 逻辑门
