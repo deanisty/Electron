@@ -1,5 +1,6 @@
 #### 半导体
 
+>引用自：
 >https://electronics.howstuffworks.com/diode.htm
 
 #### How Semiconductors Work
