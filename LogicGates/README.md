@@ -6,10 +6,13 @@
 
 ![circle-and](https://github.com/deanisty/Electron/blob/master/LogicGates/circle-and.jpg)
 ![circle-or](https://github.com/deanisty/Electron/blob/master/LogicGates/circle-or.jpg)
-![logic-and](https://github.com/deanisty/Electron/blob/master/LogicGates/logic-and.jpg)
-![relay-and](https://github.com/deanisty/Electron/blob/master/LogicGates/relay-and.jpg)
+
+#### 继电器
 
 ![relay](https://github.com/deanisty/Electron/blob/master/LogicGates/relay.jpg)
+
+![relay-and](https://github.com/deanisty/Electron/blob/master/LogicGates/relay-and.jpg)
+![logic-and](https://github.com/deanisty/Electron/blob/master/LogicGates/logic-and.jpg)
 
 #### 逻辑门
 
