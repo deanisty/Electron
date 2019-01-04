@@ -54,3 +54,18 @@ A    B    S   C
 上图可简化表示为下面的方块图，称其为“全加器（Full Adder）”：
 
 ![full-adder](https://github.com/deanisty/Electron/blob/master/Binary%20Adder/images/full-adder-1.png)
+
+下表是全加器所有可能的输入以及相应的输出：
+
+```c
+A/B 是两个相加的数  S 是和 CI 是进位输入  CO 是进位输出
+A   B    CI    S    CO
+0   0    0     0    0
+0   1    0     1    0
+1   0    0     1    0
+1   1    0     0    1
+0   0    1     1    0
+0   1    1     0    1
+1   0    1     0    1
+1   1    1     1    1
+```
