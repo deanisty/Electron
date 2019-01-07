@@ -194,6 +194,86 @@ R - S触发器能够记住哪一个输入端最近被输入高电位，这确实
 中，当时钟输入为1时，数据端输入的改变也不会影响输出。只有在时钟输入从0变到1的瞬间，
 数据端的输入才会影响边沿触发器的输出。
 
+边沿触发的D型触发器是由两级R - S触发器按如下方式连接而成的：
 
+![edge-trigger](https://github.com/deanisty/Electron/blob/master/Trigger%20and%20Counter/edge-trigger.png);
 
+把振荡器的输出连到边沿触发的D型触发器的时钟输入端，并把端输出连到自己的D输入端：
 
+![clk-edge-trigger](https://github.com/deanisty/Electron/blob/master/Trigger%20and%20Counter/clk-edge-trigger.png)
+
+触发器的输出同时又是它自己的输入。（实际上，这种构造可能是有问题的。振荡器是由
+来回迅速转变状态的继电器构成的。振荡器的输出和构成触发器的继电器相连，而这些继电
+器不一定能跟上振荡器的速度。为了避免这些问题，这里假设振荡器中继电器的速度比这个
+电路中其他地方的继电器的速度都慢。）
+
+观察下面的功能表，就可以明白电路中发生的情况了。刚开始时， C l k输入和Q端输出都
+是0，则 Q 端输出为1，而它和D输入是相连的：
+
+当C l k输入从0变到1后，Q端输出就和D输入一样了：
+
+但是因为－Q 端输出变为0，因而D输入也变为0。C l k输入现在是1：
+
+当C l k信号变回为0时，不会影响输出：
+
+现在C l k信号再变为1。由于D输入为0，则Q为0且－Q为1：
+
+所以D输入也变为1：
+
+![clk-edge-trigger-values](https://github.com/deanisty/Electron/blob/master/Trigger%20and%20Counter/clk-edge-trigger-values.jpg)
+
+以上发生的情况总结起来就是：每当C l k输入从0变到1时，Q端输出就发生改变，或者从0
+变到1，或者从1变到0。看看下面的图，问题就更清楚了：
+
+![clk-edge-trigger](https://github.com/deanisty/Electron/blob/master/Trigger%20and%20Counter/clk-edge-trigger-values-1.png)
+
+当C l k输入从0变到1时，D的值（与的值是相同的）被输出到Q端。当下一次C l k信号从
+0变到1时，同样会改变D和的值。
+若振荡器的频率是2 0赫兹（即每秒2 0次循环），则Q的输出频率是它的一半，即1 0赫兹。
+由于这个原因，这种电路(其中输出依循触发器的数据端输入)称为分频器。
+当然分频器的输出可以是另一个分频器的C l k输入，并再一次进行分频。下面是三个分频
+器连在一起的情况：
+
+![clk-edge-trigger](https://github.com/deanisty/Electron/blob/master/Trigger%20and%20Counter/sub-frequency.png)
+
+让我们来看一下上图顶部的4个信号的变化规律：
+
+![sub-frequency-values](https://github.com/deanisty/Electron/blob/master/Trigger%20and%20Counter/sub-frequency-values.png)
+
+这里只给出了这幅图的一部分，因为这个电路会周而复始地变化下去。从这个图中，有
+没有发现使你眼熟的东西？
+提示你一下，把这些信号标上0和1：
+
+![sub-frequency-values](https://github.com/deanisty/Electron/blob/master/Trigger%20and%20Counter/sub-frequency-values-01.png)
+
+现在看出来了吗？把这个图顺时针旋转9 0度，读一读横向的4位数字，每一组输出都对应
+了十进制中0～1 5中的一个数.
+
+这个电路只具备了一个计数功能，如果再多加上几个触发器，它就可能计更多的数。第8
+章曾指出在一个递增的二进制数序列中，每一列数字在0和1之间变化的频率是其右边那一列
+数字变化频率的一半，这个计数器模仿了这一点。时钟信号每一次正跳变时，计数器的输出
+就递加了1。
+
+可以把8个触发器集成于一个盒子里，构成一个8位计数器：
+
+![8-bit-counter](https://github.com/deanisty/Electron/blob/master/Trigger%20and%20Counter/8-edge-trigger.png)
+
+这个计数器称为8位行波（异步）计数器，因为每一个触发器的输出都成为下一个触发器
+的时钟输入。变化是沿着触发器一级一级地传递的，最后一级触发器的变化必定要延迟一些。
+更复杂的计数器是“并行（同步）计数器”，在这种计数器中，所有输出是同时改变的。
+输出端信号已标识为从Q0～Q7，Q0是第一个触发器的输出。如果把灯泡连到这些输出上，
+就可以把8位结果读出来。
+这样一个计数器的时序图可以把8个输出分开来表示，也可以把它们一起表示，如下图所
+示：
+
+![8-bit-counter](https://github.com/deanisty/Electron/blob/master/Trigger%20and%20Counter/8-edge-trigger-time-sq.png)
+
+时钟信号的每个正跳变发生时，一些Q输出可能改变，另一些可能不改变，但总体上是使
+8位行波计数量
+原来的结果递增了1。
+本章前面曾提到过可以找到某种方法来确定振荡器的频率，现在这个方法已经找到了。
+如果把振荡器连到8位计数器的时钟输入上，计数器会显示出振荡器经历了多少次循环。当计
+数器总和达到11111111时，它又会返回到0 0 0 0 0 0 0 0。使用计数器确定振荡器频率的最简单方
+法是把计数器的输出连到8个灯泡上。当所有输出为0时（即没有一个灯泡点亮），启动一个秒
+表；当所有灯泡都点亮时，停住秒表。这就是振荡器循环2 5 6次所需要的时间。假设是1 0秒钟，
+则振荡器的频率就是2 5 6÷1 0，或者说是2 5 . 6赫兹。
