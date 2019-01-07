@@ -59,3 +59,11 @@
 来真正地测量一个振荡器的速度。
 为了构造这个器件，先看一个用特殊方式连接的一对或非门。或非门的特点是只有两个
 输入都为0时，输出才为1：
+
+![nor](https://github.com/deanisty/Electron/blob/master/Trigger%20and%20Counter/nor-values.jpg)
+
+下图是含有两个或非门、两个开关和一个灯泡的电路：
+
+![two-nor-gates](https://github.com/deanisty/Electron/blob/master/Trigger%20and%20Counter/two-nor-gates.png)
+
+注意图中奇特的连接方式：
