@@ -27,11 +27,11 @@
 
 一个开关、一根电线、一个灯泡和一个电池可以组合成电路，如果增加一个开关，那么这就类似一个逻辑与的关系，只有两个开关同时闭合，才会有电流在电路中流动。
 
-![circle-and](https://github.com/deanisty/Electron/blob/master/002-Logic-Gates/images/circle-and.jpg)
+![circle-and](images/circle-and.jpg)
 
 同样，也可以构造一个类似逻辑或的电路。
 
-![circle-or](https://github.com/deanisty/Electron/blob/master/002-Logic-Gates/images/circle-or.jpg)
+![circle-or](images/circle-or.jpg)
 
 #### 继电器
 
@@ -40,22 +40,22 @@
 事实上，继电器放大了一个很弱的信号使其成为一个强信号。就我们的目的而言，我们并不对它的信号放大能力感兴趣，
 真正使我们着迷的是继电器作为开关可用电来控制而不用手指。
 
-![relay](https://github.com/deanisty/Electron/blob/master/002-Logic-Gates/images/relay.jpg)
+![relay](images/relay.jpg)
 
 正是因为有了继电器的间接触发电路开闭的功能，我们才得以能够构造更加复杂逻辑电路。
 下面是两个继电器构造的逻辑与电路：
 
-![relay-and](https://github.com/deanisty/Electron/blob/master/002-Logic-Gates/images/relay-and.jpg)
+![relay-and](images/relay-and.jpg)
 
 逻辑与电路可以简化成为这个符号：
 
-![logic-and](https://github.com/deanisty/Electron/blob/master/002-Logic-Gates/images/logic-and.jpg)
+![logic-and](images/logic-and.jpg)
 
 #### 逻辑门
 
 与门
 
-![and-gate](https://github.com/deanisty/Electron/blob/master/002-Logic-Gates/images/and-gate.jpg)
+![and-gate](images/and-gate.jpg)
 
 输入和输出的对应关系：
 
@@ -67,7 +67,7 @@ AND   0   1
  
  或门
  
-![or-gate](https://github.com/deanisty/Electron/blob/master/002-Logic-Gates/images/or-gate.jpg)
+![or-gate](images/or-gate.jpg)
 
 
 输入和输出的对应关系：
@@ -80,7 +80,7 @@ AND   0   1
  
 非门
 
-![not-gate](https://github.com/deanisty/Electron/blob/master/002-Logic-Gates/images/not-gate.jpg)
+![not-gate](images/not-gate.jpg)
 
 输入和输出的对应关系：
 
@@ -91,7 +91,7 @@ AND   0   1
 
  与非门
  
-![nand-gate](https://github.com/deanisty/Electron/blob/master/002-Logic-Gates/images/nand-gate.jpg)
+![nand-gate](images/nand-gate.jpg)
 
 输入和输出的对应关系：
 
@@ -103,7 +103,7 @@ AND   0   1
 
  或非门
  
-![nor-gate](https://github.com/deanisty/Electron/blob/master/002-Logic-Gates/images/nor-gate.jpg)
+![nor-gate](images/nor-gate.jpg)
 
 输入和输出的对应关系：
 

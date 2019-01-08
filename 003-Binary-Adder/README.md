@@ -24,11 +24,11 @@
 
 和的结果和异或运算一致，进位结果和与运算结果一致，因此可以将异或门和与门组合成两个一位的二进制数的加法器：
 
-![xor-and](https://github.com/deanisty/Electron/blob/master/Binary%20Adder/images/xor-and.jpg)
+![xor-and](images/xor-and.jpg)
 
 简化如下形式：
 
-![half-adder](https://github.com/deanisty/Electron/blob/master/Binary%20Adder/images/half-adder.jpg)
+![half-adder](images/half-adder.jpg)
 
 只能计算两个一位二进制数的加法器称作半加器，它产生的结果如下：
 
@@ -43,7 +43,7 @@ A    B    S   C
 
 半加器只能计算两个一位二进制数的求和运算，它会产生一个和和一个进位输出，如果要计算大于一位的二进制数的加法，就需要把两个半加器连起来。
 
-![full-adder](https://github.com/deanisty/Electron/blob/master/Binary%20Adder/images/full-adder.jpg)
+![full-adder](images/full-adder.jpg)
 
 要理解它的工作原理，先从最左边第一个半加器的A 输入和B 输入开始，其输出是一个和及相应的进位。
 这个和必须和前一列的进位输入(简称CI) 加起来，然后把它们输入到第二个半加器。第二个半加器的和输出是最后的和。
@@ -53,7 +53,7 @@ A    B    S   C
 
 上图可简化表示为下面的方块图，称其为“全加器（Full Adder）”：
 
-![full-adder](https://github.com/deanisty/Electron/blob/master/Binary%20Adder/images/full-adder-1.png)
+![full-adder](images/full-adder-1.png)
 
 下表是全加器所有可能的输入以及相应的输出：
 
@@ -74,19 +74,19 @@ A   B    CI    S    CO
 所以进位输入接地，然后第一个全加器的进位输出作为第二个全加器的进位输入，以此类推，最高位的全加器的进位输出作为最后加法结果的进位位，这样组合起来的
 加法器如下图所示：
 
-![8-bit-adder](https://github.com/deanisty/Electron/blob/master/Binary%20Adder/images/8-bit-adder.png)
+![8-bit-adder](images/8-bit-adder.png)
 
 或者画成这样：
 
-![8-bit-adder](https://github.com/deanisty/Electron/blob/master/Binary%20Adder/images/encap-8-bit-adder.png)
+![8-bit-adder](images/encap-8-bit-adder.png)
 
 也可以封装在小盒子里：
 
-![8-bit-adder](https://github.com/deanisty/Electron/blob/master/Binary%20Adder/images/encap-8-bit-adder.png);
+![8-bit-adder](images/encap-8-bit-adder.png);
 
 一旦构造了一个8位加法器，就可以构造另一个加法器。把它们级联起来可以很容易地构成1 6位加法器：
 
-![16-bit-adder](https://github.com/deanisty/Electron/blob/master/Binary%20Adder/images/16-bit-adder.jpg)
+![16-bit-adder](images/16-bit-adder.jpg)
 
 右边加法器的进位输出连到左边加法器的进位输入端。左边加法器的输入包含了两个加数的高8位，同时产生了结果的高8位。
 
