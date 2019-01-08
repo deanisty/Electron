@@ -22,14 +22,14 @@ Silicon is a very common element -- for example, it is the main element in sand 
 If you look "silicon" up in the periodic table, you will find that it sits next to aluminum, 
 below carbon and above germanium.
 
-![silicon-in-periodic-table](https://github.com/deanisty/Electron/blob/master/semiconductor/diode-periodic.gif)
+![silicon-in-periodic-table](images/diode-periodic.gif)
 
 Carbon, silicon and germanium (germanium, like silicon, is also a semiconductor) have a unique property in their electron structure 
 -- each has four electrons in its outer orbital. This allows them to form nice crystals. 
 The four electrons form perfect covalent bonds with four neighboring atoms, creating a lattice. 
 In carbon, we know the crystalline form as diamond. In silicon, the crystalline form is a silvery, metallic-looking substance.
 
-![silicon-lattice](https://github.com/deanisty/Electron/blob/master/semiconductor/diode-silicon-lattice.gif)
+![silicon-lattice](images/diode-silicon-lattice.gif)
 
 Metals tend to be good conductors of electricity because they usually have "free electrons" that can move easily between atoms, 
 and electricity involves the flow of electrons. While silicon crystals look metallic, they are not, in fact, metals. 
@@ -71,7 +71,7 @@ A diode is a one-way turnstile for electrons.
 When you put N-type and P-type silicon together as shown in this diagram, 
 you get a very interesting phenomenon that gives a diode its unique properties.
 
-![diode](https://github.com/deanisty/Electron/blob/master/semiconductor/diode.gif)
+![diode](images/diode.gif)
 
 Even though N-type silicon by itself is a conductor, and P-type silicon by itself is also a conductor, 
 the combination shown in the diagram does not conduct any electricity. 
@@ -98,7 +98,7 @@ this protects the sensitive electronics in the device.
 
 A semiconductor diode's behavior is not perfect, as shown in this graph:
 
-![diode-graph](https://github.com/deanisty/Electron/blob/master/semiconductor/diode-graph.gif)
+![diode-graph](images/diode-graph.gif)
 
 When reverse-biased, an ideal diode would block all current. 
 A real diode lets perhaps 10 microamps through -- not a lot, but still not perfect. 
