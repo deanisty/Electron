@@ -1,6 +1,6 @@
 #### 摩斯密码
 
-![morse code](https://github.com/deanisty/Electron/blob/master/LogicGates/Morse-code.JPG)
+![morse code](images/Morse-code.JPG)
 
 尽管摩尔斯电码与计算机毫不相关，但熟悉它的本质却对深入了解计算机内部语言和软硬件的内部结构有很大的帮助。
 在《百年孤独》的一书的开篇，马尔克斯回忆了一个时代，那时“世界一片混沌，许多事物没有名字。为了加以区别才给事物各个命名。
